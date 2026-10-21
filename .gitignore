@@ -1,0 +1,12 @@
+# 依赖
+node_modules/
+
+# 编辑器/构建残留与备份
+*.bak
+*.bak-*
+*.log
+*.tmp
+
+# 系统文件
+.DS_Store
+Thumbs.db
