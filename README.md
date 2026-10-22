@@ -121,6 +121,17 @@ node --check lib/client.js
 - 工作流引用未安装的模型时，ComfyUI 会在画布上自己弹提示，插件不做拦截。
 - 与 `dsh-comfyui-agent` 工具名重叠（`comfyui_workflows`、`comfyui_run`），不建议同时启用。
 
+## 代码来源
+
+界面形态与部分实现来自另外两个插件：
+
+- **[@dickpy/dsh-imagegen](https://www.npmjs.com/package/@dickpy/dsh-imagegen)**（@dickpy）：
+  侧边栏双段 tab、接管中心列、三栏工作台、参数条的交互形态。
+- **[fandc520/dsh-comfyui](https://github.com/fandc520/dsh-comfyui)**（MIT）：
+  `lib/fandc/` 下的工作流库、资产页、队列页、技能包、传输等模块，仅改挂载方式（`mountFandc(ctx)`）与依赖内联（`fflate`）。
+
+另：客户端模块的加载形态参考 `dsh-plugin-wallpaper-engine` 的产物结构（`window.__ModuleLoader__.load({ id, factory })`）。
+
 ## 许可
 
 MIT。`lib/fandc/` 移植自 [fandc520/dsh-comfyui](https://github.com/fandc520/dsh-comfyui)（MIT）。
