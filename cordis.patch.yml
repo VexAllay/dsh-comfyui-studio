@@ -1,0 +1,8 @@
+# dsh-comfyui-studio bundle patch: 把插件行插进 web profile 的花名册。
+# 该行是裸插件（按包名引用）：node 半边（exports "."）跑在宿主进程里
+# （ComfyUI 探活 / 启动 / 工作流读写 / REST 代理），package.json 里的
+# dsh.client 声明让浏览器半边（exports "./client"，由宿主在
+# /plugins/comfyui-studio/client.js 提供）加载进 web GUI。
+- insert:
+    - id: comfyui-studio
+      name: dsh-comfyui-studio
